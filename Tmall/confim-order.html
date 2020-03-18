@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	nav.top {
+		background-color: whitesmoke;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid whitesmoke;
+
+	}
+
+	nav.top a,
+	nav.top span {
+		font-size: 11px;
+		font-family: "arial black";
+		color: black;
+		margin: 0px 10px 0px 10px;
+		opacity: 0.7;
+
+	}
+
+	nav.top a:hover {
+		color: red;
+		text-decoration: none;
+	}
+
+	img.logo {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		margin: 30px 0px 10px 140px;
+		top: 30px;
+		z-index: -1;
+
+	}
+
+	div.searchDiv {
+		top: 40px;
+		position: absolute;
+		background-color: #FF0036;
+		width: 551px;
+		margin: 20px auto;
+		padding: 1px;
+		padding-bottom: 2px;
+		height: 39px;
+		display: block;
+		margin-left: 600px;
+
+	}
+
+	div.searchDiv input {
+		background-color: white;
+		width: 450px;
+		border: 5px solid transparent;
+		height: 33px;
+		margin: 2px;
+		outline: none;
+
+	}
+
+	div.searchDiv input:hover {}
+
+	div.searchDiv button {
+		width: 80px;
+		border: 1px solid transparent;
+		background-color: #FF0036;
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		height: 25px;
+	}
+
+	div.searchBelow {
+		margin-top: 8px;
+
+	}
+
+	div.searchBelow span {
+		color: white;
+	}
+
+	div.searchBelow a {
+		color: #999999;
+		padding: 0px 20px 0px 20px;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	div.searchBelow a:hover {
+		color: #FF0036;
+	}
+
+	.confim-icon {
+		width: 77%;
+		height: 130px;
+		margin-left: 200px;
+		margin-top: 70px;
+	}
+
+	.confim-icon-title {
+		color: #888;
+		margin-right: 148px;
+	}
+
+	.confim-icon-title1 {
+		margin-right: 60px;
+		padding-top: 10px;
+		color: #999;
+	}
+</style>
+
+
+<nav class="top">
+	<a href="#">
+		<span class=" glyphicon glyphicon-home "></span>
+		天猫首页
+	</a>
+
+	<span>喵，欢迎来天猫</span>
+	<a href="#">请登录</a>
+	<a href="#">免费注册</a>
+
+	<span class="pull-right">
+		<a href="#">我的淘宝</a>
+		<a href="#">
+			<span class="glyphicon glyphicon-shopping-cart" style="color: red;"></span>
+			购物车<strong>0</strong>件
+		</a>
+	</span>
+</nav>
+
+
+<div class="serach" style="height: 50px;">
+
+	<a href="#">
+		<img class="logo" src="./Tmall/Ticon.png" />
+	</a>
+
+
+	<div class="searchDiv">
+		<input type="text" name="keyword" placeholder="搜索 天猫 商品/品牌/店铺" />
+		<button class="searchButton" type="submit">搜索</button>
+		<!--	
+		<div class="searchBelow">
+			<span> <a href="#">平衡车</a> <span>|</span>		</span>
+			<span> <a href="#">扫地机器人</a> <span>|</span>		</span>
+			<span> <a href="#">榨汁机</a> <span>|</span>		</span>
+			<span> <a href="#">冰箱</a> <span>|</span>		</span>
+		</div>
+		-->
+	</div>
+
+</div>
+
+<div class="confim-icon">
+	<table>
+		<tr>
+			<td><span class="confim-icon-title">拍下商品</span></td>
+			<td><span class="confim-icon-title">付款到支付宝</span></td>
+			<td><span class="confim-icon-title">卖家发货</span></td>
+			<td><span class="confim-icon-title">确认收货</span></td>
+			<td><span class="confim-icon-title">评价</span></td>
+		</tr>
+	</table>
+
+	<span><img src="Tmall/confim-icon.png"></span>
+
+	<table>
+		<tr>
+			<td><span class="confim-icon-title1">2020-03-05 00:00:45</span></td>
+			<td><span class="confim-icon-title1">2020-03-05 00:01:29</span></td>
+			<td><span class="confim-icon-title1">2020-03-05 07:11:03</span></td>
+
+		</tr>
+
+
+	</table>
+</div>
+
+<style type="text/css">
+	.cart {
+		width: 75%;
+		height: auto;
+		margin: 0px 140px 0px 140px;
+		border: 1px solid #e6e6e6;
+		position: relative;
+		border-top: none;
+	}
+
+	.cart-1 {
+		margin-top: 10px;
+	}
+
+	.cart-title1 {
+		width: 100%;
+		height: 52px;
+		border-bottom: 2px solid #E5E5E5;
+	}
+
+	.cart-title {
+
+		width: 350px;
+		height: 50px;
+		padding: 10px 10px 0px 0px;
+		font-size: 18px;
+		font-weight: 700;
+		text-align: center;
+		
+		float: left;
+		color: #333333;
+	}
+
+	
+
+	.cart-title3 {
+		float: right;
+		margin-top: 10px;
+
+	}
+
+	.cart-title3 span:hover {
+		color: black;
+		text-decoration: none;
+	}
+
+	.cart-title3 button {
+
+		letter-spacing: 2px;
+		font-size: 12px;
+		color: #F2F2F2;
+		background: #aaa;
+		border: none;
+		width: 55px;
+		height: 27px;
+	}
+
+	.cart-detile-title {
+		width: 100%;
+		height: 40px;
+		border: 1px solid #e8e8e8;
+		padding: 10px 0px 10px 15px;
+		font-size: 14px;
+		margin-top: 0px;
+		padding-left: 55px;
+		font-weight: 700;
+		
+	}
+
+	.cart-column {
+		font-size: 12px;
+		font-family: arial;
+		width: 100%;
+		height: 40px;
+
+		background:#daf3ff;
+
+	}
+
+	.cart-detile {
+		font-size: 13px;
+		margin-top: 10px;
+		border-bottom: 1px solid #E3E3E3;
+		padding-bottom: 7px;
+		padding-left: 15px;
+	}
+
+	.cart-number {
+		padding: 7px;
+		background: #fff0e7;
+		color: #efbba9;
+		cursor: pointer;
+	}
+
+	.cart-title1 a:hover {
+		color: #f40;
+	}
+
+	.shouhou {
+		font-size: 12px;
+		color: #3c3c3c;
+		margin-left: 40px;
+		margin-right: 0px;
+	}
+
+	.shouhou span: hover {
+		color: #f40;
+		text-decoration: none;
+	}
+
+	.order-confim {
+		font-size: 12px;
+		margin-left: 75px;
+	}
+
+	.order-confim-button {
+		padding: 5px 8px 5px 8px;
+		background: #66b6ff;
+		color: white;
+		border-color: #66b6ff;
+		margin-left: 65px;
+	}
+	.confim-info{
+		margin-top: 40px;
+		padding-left: 40px;
+		padding-bottom: 20px;
+		font-family: arial;
+		font-size: 12px;
+	}
+	.cofim-info-1{
+		width: 120px;
+		height: 15px;
+		padding: 10px;
+	}
+	.confim-order-bottom{
+		width: 100%;
+		height: 500px;
+		border: 1px solid #f40;
+	}
+	.confim-order-bottom-1{
+		width: 100%;
+		height: 80px;
+		padding: 100px 0px 10px 150px;
+	}
+	.confim-order-bottom-1 input{
+		width: 30px;
+		height: 30px;
+	}
+	
+	</style>
+<div class="cart">
+
+	<div class="cart-title1">
+		<span class="cart-title2">
+			<span class="cart-title">我已收到货，同意支付宝付款</span>
+		</span>
+
+	</div>
+
+	<div>
+		<div class="cart-detile-title">
+			
+			<span style="color: #6c6c6c;">订单信息</span>
+			
+		</div>
+		<table class="cart-column">
+			<tr>
+
+				<td><span style="margin-right: -100px;text-align: center;padding-left: 80px;">宝贝</span></td>
+				<td style="">单价</td>
+				<td>数量</td>
+				<td>状态</td>
+				<td>商品总价</td>
+				<td>优惠</td>
+				<td>运费</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="cart-shop">
+
+		<div class="cart-1">
+
+			
+
+
+			<div class="cart-detile">
+				<table>
+					<tr>
+						<td>
+							<input type="checkbox" name="" id="" value="" />
+							<img src="https://img.alicdn.com/bao/uploaded/i1/2930372474/O1CN01CMVQd01U98SEUx5SY_!!0-item_pic.jpg_80x80.jpg"
+							 width="60px">
+						</td>
+
+						<td>
+							<p style="margin-left: 10px;">
+								<a href="#">
+								<span>荷兰克德拉克无糖燕麦片即食脱脂<span><br></span>早餐减脂健身减肥瘦身代餐粥食品</span><br>
+								</a>
+								
+								<span style="font-size: 12px;margin: 0px 30px 0px 0px;color: #999;">口味：即食麦片1250g</span>
+								<br>
+								<img src="Tmall/img/site/renzheng.png">
+							</p>
+						</td>
+
+						<td><span style="margin:0px  75px 0px 40px;">
+								<span style="color: #9C9C9C;text-decoration: line-through;">￥120.00</span><br>
+								<span style="font-weight: bold;margin-left: 40px;">￥39.90</span>
+							</span>
+						</td>
+						<td>
+							<span style="margin-right:80px ;">4</span>
+						</td>
+						<td>
+							<span>-</span>
+
+							<p></p>
+
+						</td>
+
+						<td>
+							<span style="margin: 0px 10px 0px 50px;">
+								<span style="color: #3c3c3c;font-weight: bold;font-size: 15px;">￥79.80</span><br>
+								<span style="color: #999;font-size: 12px;margin: 0px 40px 0px 40px;">(含运费：￥0.00</span><br>
+								<span style="color: #999;font-size: 12px;margin: 0px 40px 0px 40px;">进口税：￥0.00)</span><br>
+								<img style="color: #999;font-size: 12px;margin: 0px 40px 0px 60px;width: 50px;" src="Tmall/mobile-order.png" />
+								<p></p>
+							</span>
+						</td>
+						<td>
+							<a href="#" class="shouhou"><span style="font-size: 14px;"></span><br></a>
+							<a href="#" class="shouhou"><span>38活动价:</span><br></a>
+							<a href="#" class="shouhou"><span>省364.40元</span><br></a>
+							<a href="#" class="shouhou"><span style="color: #f40;"></span><br></a>
+
+							<p></p>
+
+						</td>
+						<td><span class="order-confim">
+								<span class="glyphicon glyphicon-time">快递 ： 0.00</span><br>
+								
+							</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<div class="cart-detile-title">
+		
+		<span style="color: #6c6c6c; float: right;">实付款： ￥<span style="color: #c00;font-size: 18px;"> 79.80</span></span>
+		
+	</div>
+	
+	<div class="confim-info">
+	<table >
+		<tr>
+			<td class="cofim-info-1"><span >订单编号：</span></td>
+			<td ><span class="cofim-info-2">873600930213406720 <img src="Tmall/tianmao-guoji.png" ></span></td>
+			
+		</tr>
+		<tr>
+			<td class="cofim-info-1"><span >支付宝交易号：</span></td>
+			<td ><span >2020030522001141161427717327</span></td>
+			
+		</tr>
+		<tr>
+			<td class="cofim-info-1"><span >卖家昵称：</span></td>
+			<td><span >cremedelacream海外旗舰店 <img src="Tmall/lianxi.png" ></span></td>
+			
+		</tr>
+		<tr>
+			<td class="cofim-info-1"><span >收货信息：</span></td>
+			<td><span >广东省 xx市 xx区  xxxxxxxxxxx有限公司门卫收， xxx， 1xxxxxxxxxxx， xxxx</span></td>
+			
+		</tr>
+		<tr>
+			<td class="cofim-info-1"><span >成交时间：</span></td>
+			<td><span >2020-03-05 00:00:45</span></td>
+			
+		</tr>
+	</table>
+	</div>
+	
+	
+	<div class="confim-order-bottom">
+		<div style="width: 100%;height: 80px;padding: 50px 0px 10px 100px;">
+			<span class="glyphicon glyphicon-record" style="color: #FF0036;font-size: 15px;">请收到货后，再确认收货！否则您可能钱货两空！</span><p></p>
+			<span class="glyphicon glyphicon-record" style="font-size: 15px;">如果您想申请退款，<a href="#" style="color: #284CA5;">请点击这里</a></span>
+		</div>
+		<div class="confim-order-bottom-1">
+			<img style="margin-left: 120px;" src="Tmall/confim-password.png" ><p></p>
+			<span style="font-size: 15px;">支付宝支付密码：</span>
+			<input type="text" name="" id="" value="" />
+			<input type="text" name="" id="" value="" />
+			<input type="text" name="" id="" value="" />
+			<input type="text" name="" id="" value="" />
+			<input type="text" name="" id="" value="" />
+			<a href="#" style="font-size: 12px;">忘记密码？</a><br>
+			<span style="margin-left: 120px;font-size: 12px;color: #999;">请输入6位数字支付密码</span><br>
+			<button type="button" style="margin-left: 180px;margin-top: 30px;width: 60px;height: 30px;padding-left: 10px;padding-right: 10px;background-color: #F58B0F;color: white;border: none;text-align: center;">确定</button>
+		</div>
+		
+		
+		
+	</div>
+	
+	
+</div>
+<div class="register-foot">
+</div>
+<script type="text/javascript">
+	$("div.register-foot").load("foot.html")
+</script>

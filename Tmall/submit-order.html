@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	nav.top {
+		background-color: whitesmoke;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid whitesmoke;
+
+	}
+
+	nav.top a,
+	nav.top span {
+		font-size: 11px;
+		font-family: "arial black";
+		color: black;
+		margin: 0px 10px 0px 10px;
+		opacity: 0.7;
+
+	}
+
+	nav.top a:hover {
+		color: red;
+		text-decoration: none;
+	}
+
+	img.logo {
+		width: 200px;
+		height: 30px;
+		position: absolute;
+		margin: 30px 0px 10px 140px;
+		top: 30px;
+		z-index: -1;
+
+	}
+
+	div.searchDiv {
+		top: 40px;
+		position: absolute;
+
+		width: 600px;
+		margin: 20px auto;
+		padding: 1px;
+		padding-bottom: 2px;
+		height: 39px;
+		display: block;
+		margin-left: 600px;
+
+	}
+
+
+
+
+
+	div.searchBelow {
+		margin-top: 8px;
+
+	}
+
+	div.searchBelow span {
+		color: white;
+	}
+
+	div.searchBelow a {
+		color: #999999;
+		padding: 0px 20px 0px 20px;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	div.searchBelow a:hover {
+		color: #FF0036;
+	}
+
+	.confim-icon {
+		width: 77%;
+		height: 130px;
+		margin-left: 200px;
+		margin-top: 70px;
+	}
+
+	.confim-icon-title {
+		color: #888;
+		margin-right: 148px;
+	}
+
+	.confim-icon-title1 {
+		margin-right: 60px;
+		padding-top: 10px;
+		color: #999;
+	}
+
+	.order-submit {
+		width: 79%;
+		height: 500px;
+		margin-left: 140px;
+		margin-top: 100px;
+		
+	}
+
+	.order-submit-address {
+		width: 100%;
+		height: 200px;
+		margin-bottom: 50px;
+	}
+
+	.order-submit-address-1 {
+		height: 106px;
+		width: 236px;
+		cursor: pointer;
+		background: url(Tmall/background.png);
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.order-submit-address-2 {
+		height: 106px;
+		width: 236px;
+		cursor: pointer;
+		background: url(//img.alicdn.com/tps/i2/T1VPiBXvpeXXbjLKQ7-237-106.png) no-repeat;
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.order-submit-address-3 {
+		height: 106px;
+		width: 236px;
+		cursor: pointer;
+		background: url(//img.alicdn.com/tps/i2/T1VPiBXvpeXXbjLKQ7-237-106.png) no-repeat;
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.order-submit-address-4 {
+		height: 106px;
+		width: 236px;
+		cursor: pointer;
+		background: url(//img.alicdn.com/tps/i2/T1VPiBXvpeXXbjLKQ7-237-106.png) no-repeat;
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+
+
+	.order-submit-address-update a {
+		padding: 5px;
+		color: #c97;
+	}
+
+	.order-submit-address-update1 span:hover {
+		color: red;
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript">
+	$(".order-submit-address-4").mousemove(function() {
+		$(".order-submit-address-4").url(Tmall / background.png);
+	});
+</script>
+
+<nav class="top">
+	<a href="#">
+		<span class=" glyphicon glyphicon-home "></span>
+		天猫首页
+	</a>
+
+	<span>喵，欢迎来天猫</span>
+	<a href="#">请登录</a>
+	<a href="#">免费注册</a>
+
+	<span class="pull-right">
+		<a href="#">我的淘宝</a>
+		<a href="#">
+			<span class="glyphicon glyphicon-shopping-cart" style="color: red;"></span>
+			购物车<strong>0</strong>件
+		</a>
+	</span>
+</nav>
+
+
+<div class="serach" style="height: 50px;">
+
+	<a href="#">
+		<img class="logo" src="./Tmall/Ticon.png" />
+	</a>
+
+
+	<div class="searchDiv">
+		<img src="Tmall/icon22.png">
+		<span style="font-size: 16px;font-weight: 700;margin:10px  60px 0px -20px;">查看购物车</span>
+		<span style="font-size: 16px;margin-right: 60px;">拍下商品</span>
+		<span style="font-size: 16px;margin-right: 60px;">付款到支付宝</span>
+		<span style="font-size: 16px;margin-right: 86px;">确认收货</span>
+		<span style="font-size: 16px;">评价</span>
+		<!--	
+		<div class="searchBelow">
+			<span> <a href="#">平衡车</a> <span>|</span>		</span>
+			<span> <a href="#">扫地机器人</a> <span>|</span>		</span>
+			<span> <a href="#">榨汁机</a> <span>|</span>		</span>
+			<span> <a href="#">冰箱</a> <span>|</span>		</span>
+		</div>
+		-->
+	</div>
+
+</div>
+
+<style type="text/css">
+	.cart-column {
+		font-size: 12px;
+		font-family: arial;
+		width: 100%;
+		height: 40px;
+		border-bottom:4px solid #daf3ff;
+
+	}
+
+	.cart-1 {
+		margin-top: 10px;
+	}
+
+	.cart-detile-title {
+		width: 100%;
+		height: 40px;
+		border: 1px solid #e8e8e8;
+		padding: 10px 0px 10px 15px;
+		font-size: 14px;
+		margin-top: 0px;
+		
+		font-weight: 700;
+
+	}
+
+	.cart-detile {
+		font-size: 13px;
+		margin-top: 10px;
+		border-bottom: 1px solid #E3E3E3;
+		padding-bottom: 7px;
+		padding-left: 15px;
+	}
+
+	.shouhou {
+		font-size: 12px;
+		color: #3c3c3c;
+		margin-left: 40px;
+		margin-right: 0px;
+	}
+
+	.shouhou span: hover {
+		color: #f40;
+		text-decoration: none;
+	}
+	.cart-column-title{
+		text-align: center;
+		padding:0px 50px 0px 85px;
+		border: 1px solid red;
+	}
+	.order-confim {
+		font-size: 12px;
+		margin-left: 155px;
+		font-size: 18px;
+		color: #FF0036;
+	}
+	.submit-info{
+		width: 79%;
+		height: 250px;
+		
+		margin-left: 140px;
+		padding-top: 10px;
+		padding-left: 15px;
+		font-size: 12px;
+		background: whitesmoke;
+	}
+	.submit-info-1{
+		width: 50%;
+		height: 240px;
+		
+		float: left;
+		
+	}
+	.submit-info-1 input{
+		width: 300px;
+		height: 50px;
+		margin-top: 10px;
+		border-right: 1px solid rgb(255, 255, 255);
+		border-top: 1px solid rgb(255, 255, 255);
+	}
+	.submit-info-2{
+		width: 50%;
+		height: 240px;
+		
+		float: left;
+	}
+	.submit-info-confim{
+		width: 25%;
+		height: 140px;
+		margin-top: 20px;
+		margin-left: 870px;
+		font-size: 12px;
+	}
+	.submit-info-confim-1 button{
+		width: 150px;
+		height: 38px;
+		
+		background: #FF0036;
+		color: white;
+		border: none;
+		margin-left: 185px;
+	}
+</style>
+<div class="order-submit">
+	<div class="order-submit-address">
+		<div style="padding: 5px;">
+			<span style="font-size: 15px;font-weight: 700;font-family: arial black;">选择收货地址</span>
+		</div>
+
+		<div class="order-submit-address-1">
+			<div style="padding: 10px;border-bottom: 1px solid #999;font-size: 12px;font-weight: 600;">
+				<span>广东汕头（林轩收）</span>
+			</div>
+			<div style="padding: 5px;">
+				<span>xxxxxxxxxxxxxxxx收 17xxxxxxxxxx</span>
+			</div>
+			<div class="order-submit-address-update">
+				<a href="#" class="order-submit-address-update1"><span>修改</span></a>
+			</div>
+		</div>
+
+		<div class="order-submit-address-2">
+			<div style="padding: 10px;border-bottom: 1px solid #999;font-size: 12px;font-weight: 600;">
+				<span>广东汕头（林轩收）</span>
+			</div>
+			<div style="padding: 5px;">
+				<span>xxxxxxxxxxxxxxxx收 17xxxxxxxxxx</span>
+			</div>
+			<div class="order-submit-address-update">
+				<a href="#" class="order-submit-address-update1"><span>修改</span></a>
+			</div>
+		</div>
+
+		<div class="order-submit-address-3">
+			<div style="padding: 10px;border-bottom: 1px solid #999;font-size: 12px;font-weight: 600;">
+				<span>广东汕头（林轩收）</span>
+			</div>
+			<div style="padding: 5px;">
+				<span>xxxxxxxxxxxxxxxx收 17xxxxxxxxxx</span>
+			</div>
+			<div class="order-submit-address-update">
+				<a href="#" class="order-submit-address-update1"><span>修改</span></a>
+			</div>
+		</div>
+
+		<div class="order-submit-address-4">
+			<span class="order-submit-address-4-1">
+				<div style="padding: 10px;border-bottom: 1px solid #999;font-size: 12px;font-weight: 600;">
+					<span>广东汕头（林轩收）</span>
+				</div>
+				<div style="padding: 5px;">
+					<span>xxxxxxxxxxxxxxxx收 17xxxxxxxxxx</span>
+				</div>
+				<div class="order-submit-address-update">
+					<a href="#" class="order-submit-address-update1"><span>修改</span></a>
+				</div>
+			</span>
+		</div>
+
+	</div>
+	<div style="padding: 5px;">
+		<span style="font-size: 15px;font-weight: 700;font-family: arial black;margin-top: 20px;">确认订单信息</span>
+	</div>
+	<div>
+		<table class="cart-column">
+			<tr>
+
+				<td><span style=" padding:0px 50px 0px 85px;">店铺宝贝</span>
+				<span style=" margin-left: 150px;">商品属性</span>
+				<span style=" margin-left: 80px;">单价</span>
+				<span style=" margin-left: 70px;">数量</span>
+				<span style=" margin-left: 90px;">优惠方式</span>
+				<span style=" margin-left: 150px;">小计</span></td>
+				
+				
+				<td></td>
+				<td></td>
+				
+			</tr>
+		</table>
+	</div>
+
+	<div class="cart-shop">
+		
+
+		<div class="cart-1">
+			<div class="cart-2">
+
+
+				<div class="cart-detile-title">
+					<img src="Tmall/tianmao-icon.png" >
+					<span style="color: #6c6c6c;">店铺:</span>
+					<a href="#"><span style="margin: 0px 10px 0px 8px;"> 施华洛世奇官方旗舰店</span></a>
+					<a href="#"><img src="Tmall/img/site/wangwang.png" ></a>
+				</div>
+
+
+				<div class="cart-detile">
+					<table>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="" value="" />
+								<img src="https://img.alicdn.com/bao/uploaded/i1/2930372474/O1CN01CMVQd01U98SEUx5SY_!!0-item_pic.jpg_80x80.jpg"
+								 width="60px">
+							</td>
+
+							<td>
+								<p style="margin-left: 10px;font-size: 12px;">
+									<span>荷兰克德拉克无糖燕麦片即食脱脂<br>早餐减脂健身减肥瘦身代餐粥食品</span><br>
+									<span style="font-size: 12px;margin: 0px 30px 0px 0px;color: #999;">口味：即食麦片1250g</span>
+									<br>
+									<img src="Tmall/img/site/renzheng.png">
+								</p>
+							</td>
+<td>
+								<span style="margin:0px 80px 0px 80px;">-</span>
+
+								<p></p>
+
+							</td>
+							<td><span style="margin:0px  70px 0px 20px;">
+									<span style="color: #9C9C9C;text-decoration: line-through;">￥120.00</span><br>
+									<span style="font-weight: bold;margin-left: 20px;">￥39.90</span>
+								</span>
+							</td>
+							<td>
+								<span style="margin-right:40px ;">4</span>
+							</td>
+							
+
+							<td>
+								<span style="margin: 0px 10px 0px 60px;">
+									<span style="color: #3c3c3c;font-weight: bold;font-size: 15px;">无优惠</span><br>
+									<p></p>
+								</span>
+							</td>
+							<td>
+								
+
+								<p></p>
+
+							</td>
+							<td><span class="order-confim">3570.00</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+</div>
+<div class="submit-info">
+		<div class="submit-info-1">
+			<span>给卖家留言：</span><input type="text" name="" id="" value="" placeholder="选填,请先和商家协商一致"/>
+		</div>
+		
+		<div class="submit-info-2">
+			<div style="width: 100%;height: 62px;padding: 20px;border: 1px solid white">
+				<span>店铺优惠：</span>
+				<select name="" size="1">
+					<option value="" selected="selected">省100元：组合优惠</option>
+					<option value="">省50元：组合优惠</option>
+					<option value="">省1000元：组合优惠</option>
+				</select>
+				<span style="color: #FF0036;font-size: 18px;float: right;">-100.00</span>
+			</div>
+			<div style="width: 100%;height: 62px;padding: 20px;border: 1px solid white">
+				<span>运送方式：</span>
+				<span>普通配送 <span> 快递 </span> <span> 免邮 </span></span>
+				<span style="color: #FF0036;font-size: 18px;float: right;">0.00</span>
+			</div>
+			<div style="width: 100%;height: 62px;padding: 20px;border: 1px solid white;">
+				<span>运费险：</span>
+				<a href="#"><span style="background: #36ab67;color: white;">运费险 </span></a>
+				<span> 卖家赠送，退换货可赔</span>
+				<span style="color: #FF0036;font-size: 18px;float: right;">0.00</span>
+			</div>
+			<div style="float: right;padding: 15px;">
+				<span>店铺合计(含运费):</span>
+				<span style="color: #FF0036;font-size: 18px;">￥3470.00</span>
+			</div>
+		</div>
+		
+	</div>
+	
+
+	<div class="submit-info-confim">
+		<div style="border: 1px solid red;">
+			
+		
+		<div style="width: 100%;height:50px ;">
+			<span style="margin: 10px;float: right;">
+			<span>实付款：</span>
+			<span style="font-size: 20px;color: #FF0036;">¥3470.00</span>
+			</span>
+		</div>
+		<div style="width: 100%;height: 50px; ">
+			<span style="font-weight: 700;">寄送至：</span>
+			<span >广东汕头xxx有限公司xxxx门卫收</span>
+			<span style="margin-top: 10px;float: right;">
+			<span style="font-weight: 700;">收货人：</span>
+			<span >林轩 171xxxxxxxxxx</span>
+			</span>
+		</div>
+		</div>
+		<div class="submit-info-confim-1">
+			<button type="button">提交订单</button>
+		</div>
+		
+	</div>
+
+
+<div class="register-foot">
+		</div>
+	<script type="text/javascript">
+			$("div.register-foot").load("foot.html")
+		</script>

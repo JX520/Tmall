@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	nav.top {
+		background-color: whitesmoke;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid whitesmoke;
+
+	}
+
+	nav.top a,
+	nav.top span {
+		font-size: 11px;
+		font-family: "arial black";
+		color: black;
+		margin: 0px 10px 0px 10px;
+		opacity: 0.7;
+
+	}
+
+	nav.top a:hover {
+		color: red;
+		text-decoration: none;
+	}
+
+	img.logo {
+		width: 188px;
+		height: 55px;
+		position: absolute;
+		margin: 30px 0px 10px 140px;
+		top: 30px;
+		z-index: -1;
+
+	}
+
+	div.searchDiv {
+		top: 40px;
+		position: absolute;
+		background-color: #f50;
+		width: 551px;
+		margin: 20px auto;
+		padding: 1px;
+		padding-bottom: 2px;
+		height: 39px;
+		display: block;
+		margin-left: 600px;
+
+	}
+
+	div.searchDiv input {
+		background-color: white;
+		width: 450px;
+		border: 1px solid transparent;
+		height: 33px;
+		margin: 1px;
+		outline: none;
+
+	}
+
+	div.searchDiv input:hover {}
+
+	div.searchDiv button {
+		width: 80px;
+		border: 1px solid transparent;
+		background-color: #f50;
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		height: 25px;
+	}
+
+	div.searchBelow {
+		margin-top: 8px;
+
+	}
+
+	div.searchBelow span {
+		color: white;
+	}
+
+	div.searchBelow a {
+		color: #999999;
+		padding: 0px 20px 0px 20px;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	div.searchBelow a:hover {
+		color: #FF0036;
+	}
+
+	.cart-shop {
+		margin-top: 20px;
+	}
+</style>
+
+<nav class="top">
+	<a href="index1.html">
+		<span class=" glyphicon glyphicon-home "></span>
+		天猫首页
+	</a>
+
+	<span>喵，欢迎来天猫</span>
+	<a href="login.html">请登录</a>
+	<a href="register.html">免费注册</a>
+
+	<span class="pull-right">
+		<a href="order.html">我的淘宝</a>
+		<a href="cart.html">
+			<span class="glyphicon glyphicon-shopping-cart" style="color: red;"></span>
+			购物车<strong>0</strong>件
+		</a>
+	</span>
+</nav>
+
+
+<div class="serach" style="height: 50px;">
+	<a href="#">
+		<img class="logo" src="Tmall/cart-logo.png" />
+	</a>
+
+
+	<div class="searchDiv">
+		<input type="text" name="keyword" placeholder="搜索 天猫 商品/品牌/店铺" />
+		<button class="searchButton" type="submit">搜索</button>
+		<!--	
+		<div class="searchBelow">
+			<span> <a href="#">平衡车</a> <span>|</span>		</span>
+			<span> <a href="#">扫地机器人</a> <span>|</span>		</span>
+			<span> <a href="#">榨汁机</a> <span>|</span>		</span>
+			<span> <a href="#">冰箱</a> <span>|</span>		</span>
+		</div>
+		-->
+	</div>
+
+</div>
+
+
+<style type="text/css">
+	.cart {
+		width: 75%;
+		height: 800px;
+		margin: 60px 140px 0px 140px;
+		border: 1px solid #e6e6e6;
+		position: relative;
+		border-top: none;
+	}
+
+	.cart-title1 {
+		width: 100%;
+		height: 52px;
+		border-bottom: 2px solid #E5E5E5;
+	}
+
+	.cart-title {
+
+		width: 110px;
+		height: 50px;
+		padding: 10px 10px 0px 10px;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		border-right: 1px solid #E5E5E5;
+		float: left;
+		color: #333333;
+	}
+
+	.cart-title2 span:hover {
+		color: #f40;
+		border-bottom: 2px solid #f40;
+		text-decoration: none;
+	}
+
+	.cart-title3 {
+		float: right;
+		margin-top: 10px;
+
+	}
+
+	.cart-title3 span:hover {
+		color: black;
+		text-decoration: none;
+	}
+
+	.cart-title3 button {
+
+		letter-spacing: 2px;
+		font-size: 12px;
+		color: #F2F2F2;
+		background: #aaa;
+		border: none;
+		width: 55px;
+		height: 27px;
+	}
+
+	.cart-detile-title {
+		width: 100%;
+		height: 40px;
+		border: 1px solid #e8e8e8;
+		padding: 10px 0px 10px 50px;
+		font-size: 12px;
+		margin-top: 0px;
+	}
+
+	.cart-column {
+		font-size: 12px;
+		font-family: arial;
+		width: 99%;
+		height: 30px;
+		margin-left: 10px;
+
+	}
+
+	.cart-detile {
+		font-size: 13px;
+		margin-top: 10px;
+		border-bottom: 1px solid #E3E3E3;
+		padding-bottom: 7px;
+		padding-left: 15px;
+	}
+
+	.cart-number {
+		padding: 7px;
+		background: #fff0e7;
+		color: #efbba9;
+		cursor: pointer;
+	}
+</style>
+
+
+<div class="cart">
+
+	<div class="cart-title1">
+		<a href="#" class="cart-title2"><span class="cart-title">全部商品<span style="color: #f40;"> 66</span></span></a>
+		<a href="#" class="cart-title2"><span class="cart-title">降价商品<span style="color: #f40;"> 4</span></span></a>
+		<a href="#" class="cart-title2"><span class="cart-title">库存紧张<span style="color: #f40;"> 0</span></span></a>
+
+		<span class="cart-title3">
+			<span style="font-size: 12px;">已选商品（不含运费）</span> <span style="color: #f40;">0.00</span>
+			<button type="button">结算</button>
+		</span>
+	</div>
+
+	<div>
+		<div>
+			<table class="cart-column">
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" />全选</td>
+					<td>商品信息</td>
+					<td style="">单价</td>
+					<td>数量</td>
+					<td>金额</td>
+					<td>操作</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="cart-shop">
+
+			<span style="margin-left: 10px;padding-bottom:10px ;">
+				<td><input type="checkbox" name="" id="" value="" />
+					<img src="Tmall/guoji-icon.png" style="width: 20px;">
+					<span style="font-weight: bold;font-size: 12px;">店铺：</span><a href="#" style="color: #333333;">CremedelaCream海 </a>
+					<a href="#"><img src="Tmall/img/site/wangwang.png"></a>
+				</td>
+			</span>
+
+			<div class="cart-1">
+
+				<div class="cart-detile-title">
+					<span style="background:#e7e7e7;color: #6c6c6c;padding: 5px;">即食1250立减</span>
+					<span style="color: #f40;margin: 0px 8px 0px 8px;">已享优惠:省￥15.00</span>
+					<span style="color: #6c6c6c;">满79.80减15</span>
+				</div>
+
+
+				<div class="cart-detile">
+					<table>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="" value="" />
+								<img src="https://img.alicdn.com/bao/uploaded/i1/2930372474/O1CN01CMVQd01U98SEUx5SY_!!0-item_pic.jpg_80x80.jpg"
+								 width="80px">
+							</td>
+
+							<td>
+								<p style="margin-left: 10px;">
+									<span>荷兰克德拉克无糖燕麦片即食脱脂<br>早餐减脂健身减肥瘦身代餐粥食品</span>
+									<span style="font-size: 12px;margin: 0px 30px 0px 20px;color: #999;">口味：即食麦片1250g</span>
+									<br>
+									<img src="Tmall/img/site/renzheng.png">
+								</p>
+							</td>
+
+							<td><span style="margin-right: 80px;">
+									<span style="color: #9C9C9C;text-decoration: line-through;">￥120.00</span>
+									<p style="font-weight: bold;">￥39.90</p>
+								</span>
+							</td>
+
+							<td>
+								<span class="cart-number">-</span>
+								<input style="margin: -2px;width: 30px;height: 30px;text-align: center;" type="text" name="" id="" value="1" />
+								<span class="cart-number">+</span><br>
+
+								<span style="background: #fff0e7;color: #efbba9;padding: 4px 12px 3px 16px;color: #f40;">限购6件</span>
+								<p></p>
+
+							</td>
+
+							<td><span style="margin: 0px 10px 0px 50px;">
+									<span style="color: #f40;font-weight: bold;">￥79.80</span><br>
+									<span style="color: #999;font-size: 12px;margin: 0px 40px 0px 40px;">进口税:商品已包税</span>
+									<p></p>
+								</span>
+							</td>
+							<td style="font-size: 12px;">
+								<p>移入收藏夹</p>
+								<p>删除</p>
+								<p>相似宝贝</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+
+			</div>
+			<div class="cart-1">
+
+				<div class="cart-detile-title">
+					<span style="background:#e7e7e7;color: #6c6c6c;padding: 5px;">普通商品</span>
+					<!--
+						<span style="color: #f40;margin: 0px 8px 0px 8px;">已享优惠:省￥15.00</span>
+						<span style="color: #6c6c6c;">满79.80减15</span>
+						-->
+				</div>
+
+
+				<div class="cart-detile">
+					<table>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="" value="" />
+								<img src="https://img.alicdn.com/bao/uploaded/i1/2930372474/O1CN01CMVQd01U98SEUx5SY_!!0-item_pic.jpg_80x80.jpg"
+								 width="80px">
+							</td>
+
+							<td>
+								<p style="margin-left: 10px;">
+									<span>荷兰克德拉克无糖燕麦片即食脱脂<br>早餐减脂健身减肥瘦身代餐粥食品</span>
+									<span style="font-size: 12px;margin: 0px 30px 0px 20px;color: #999;">口味：即食麦片1250g</span>
+									<br>
+									<img src="Tmall/img/site/renzheng.png">
+								</p>
+							</td>
+
+							<td><span style="margin-right: 80px;">
+									<span style="color: #9C9C9C;text-decoration: line-through;">￥120.00</span>
+									<p style="font-weight: bold;">￥39.90</p>
+								</span>
+							</td>
+
+							<td>
+								<span class="cart-number">-</span>
+								<input style="margin: -2px;width: 30px;height: 30px;text-align: center;" type="text" name="" id="" value="1" />
+								<span class="cart-number">+</span><br>
+								<span style="background: #fff0e7;color: #efbba9;padding: 4px 12px 3px 16px;color: #f40;">限购6件</span>
+								<p></p>
+							</td>
+
+							<td><span style="margin: 0px 10px 0px 50px;">
+									<span style="color: #f40;font-weight: bold;">￥79.80</span><br>
+									<span style="color: #999;font-size: 12px;margin: 0px 40px 0px 40px;">进口税:商品已包税</span>
+									<p></p>
+								</span>
+							</td>
+							<td style="font-size: 12px;">
+								<p>移入收藏夹</p>
+								<p>删除</p>
+								<p>相似宝贝</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="cart-shop">
+
+			<span style="margin-left: 10px;padding-bottom:10px ;">
+				<td><input type="checkbox" name="" id="" value="" />
+					<img src="Tmall/tianmao-icon.png" style="width: 20px;">
+					<span style="font-weight: bold;font-size: 12px;">店铺：</span><a href="#" style="color: #333333;">CremedelaCream海 </a>
+					<a href="#"><img src="Tmall/img/site/wangwang.png"></a>
+				</td>
+			</span>
+
+			<div class="cart-1">
+
+				<div class="cart-detile-title">
+					<span style="background:#e7e7e7;color: #6c6c6c;padding: 5px;">即食1250立减</span>
+					<span style="color: #f40;margin: 0px 8px 0px 8px;">已享优惠:省￥15.00</span>
+					<span style="color: #6c6c6c;">满79.80减15</span>
+				</div>
+
+
+				<div class="cart-detile">
+					<table>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="" value="" />
+								<img src="https://img.alicdn.com/bao/uploaded/i1/2930372474/O1CN01CMVQd01U98SEUx5SY_!!0-item_pic.jpg_80x80.jpg"
+								 width="80px">
+							</td>
+
+							<td>
+								<p style="margin-left: 10px;">
+									<span>荷兰克德拉克无糖燕麦片即食脱脂<br>早餐减脂健身减肥瘦身代餐粥食品</span>
+									<span style="font-size: 12px;margin: 0px 30px 0px 20px;color: #999;">口味：即食麦片1250g</span>
+									<br>
+									<img src="Tmall/img/site/renzheng.png">
+								</p>
+							</td>
+
+							<td><span style="margin-right: 80px;">
+									<span style="color: #9C9C9C;text-decoration: line-through;">￥120.00</span>
+									<p style="font-weight: bold;">￥39.90</p>
+								</span>
+							</td>
+
+							<td>
+								<span class="cart-number">-</span>
+								<input style="margin: -2px;width: 30px;height: 30px;text-align: center;" type="text" name="" id="" value="1" />
+								<span class="cart-number">+</span><br>
+								<!--
+								<span style="background: #fff0e7;color: #efbba9;padding: 4px 12px 3px 16px;color: #f40;">限购6件</span><p></p>
+								-->
+							</td>
+
+							<td><span style="margin: 0px 10px 0px 50px;">
+									<span style="color: #f40;font-weight: bold;">￥79.80</span><br>
+									<span style="color: #999;font-size: 12px;margin: 0px 40px 0px 40px;">进口税:商品已包税</span>
+									<p></p>
+								</span>
+							</td>
+							<td style="font-size: 12px;">
+								<p>移入收藏夹</p>
+								<p>删除</p>
+								<p>相似宝贝</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+
+
+	</div>
+	</div>
+
+</div>
+<style type="text/css">
+	.cart-bottom{
+		margin: 0px 100px 0px 140px;
+		width: 75%;
+		height: 50px;
+		border: 1px solid #B0B0B0;
+		padding: 0px 0px;
+		background: #e5e5e5;
+		font-size: 12px;
+	}
+	.cart-bottom-1{
+		margin-right: 30px;
+		margin-top: 20px;
+	}
+	.cart-order button{
+		width: 100px ;
+		height: 48px;
+		float: right;
+		background: #B0B0B0;
+		border: 1px solid #e7e7e7;
+		
+	}
+</style>
+
+<div class="">
+	
+
+			<div class="cart-bottom">
+				<span >
+					<input type="checkbox" name="" id="" value="" />
+					<span class="cart-bottom-1">全选</span>
+					<span class="cart-bottom-1">删除</span>
+					<span class="cart-bottom-1">清除失效宝贝</span>
+					<span class="cart-bottom-1">移入收藏夹</span>
+					<span class="cart-bottom-1">分享</span>
+					<span style="margin-left: 260px;">
+					<span >已选商品</span><span style="color: #f40;font-size: 18px;"> 0</span><span> 件</span>
+					<span style="margin-left: 20px;">合计（不含运费）： </span><span style="color: #f40; font-size: 18px;"> 0.00</span>
+					
+					</span>
+					
+				</span>
+				<span class="cart-order">
+				<button type="button" >结算</button>
+				</span>
+			</div>
+		
+</div>
+
+<div class="register-foot">
+	
+</div>
+<script type="text/javascript">
+	$("div.register-foot").load("foot.html")
+</script>

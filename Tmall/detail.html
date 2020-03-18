@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+
+<style>
+	body{
+	font-size: 13px;
+	font-family: arial;
+}
+
+ a{
+	color: black;
+	
+}
+
+nav.top{
+	background-color: whitesmoke;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 0px solid whitesmoke;
+	font-family: "arial black";
+	
+}
+
+nav.top a ,nav.top span{
+	font-size: 11px;
+	font-family: "arial black";
+	color: black;
+	margin: 0px 10px 0px 10px;
+	opacity: 0.7;
+	
+}
+nav.top a:hover{
+	color: red;
+	text-decoration: none;
+}
+
+div.searchDiv{
+	top: 40px;
+	position: absolute;
+	background-color: #ff0036;
+	width: 420px;
+	margin: 30px auto;
+	padding: 1px;
+	height: 40px;
+	display: block;
+	margin-left:  780px;
+	
+}
+
+div.searchDiv input{
+	background-color: white;
+	width: 300px;
+	border: 1px solid transparent;
+	height: 36px;
+	margin: 1px;
+	outline: none;
+	
+}
+
+div.searchDiv input:hover{
+	
+}
+
+div.searchDiv button{
+	width: 100px;
+	border: 1px solid transparent;
+	background-color: #FF0036;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+div.searchBelow{
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
+div.searchBelow span{
+	color: white;
+}
+
+div.searchBelow a{
+	color: #999999;	
+	padding: 0px 20px 0px 20px;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+div.searchBelow a:hover{
+	color: #FF0036;
+}
+
+img.logo{
+	width: 200px;
+	position: absolute;
+	margin:30px 0px 10px 90px;
+	top: 40px;
+	z-index: -1;
+	
+}
+
+div.search{
+	position: absolute;
+	z-index: 1;
+}
+
+div.dian{
+	width: 350px;
+	
+	margin-top: 40px;
+	margin-left: 300px;
+}
+
+td.dianpu{
+	width: 120px;
+	padding: 0px 5px;
+	border-right: ; 1px solid whitesmoke;
+	display: inline-block;
+	margin: 0px 20px 20px 0px;
+	
+}
+
+td.pingfen{
+	
+	display: inline-block;
+	margin: 0px 20px 20px 0px;
+	border-right: ; 1px solid whitesmoke;
+}
+td.mobile{
+	width: 35px;
+	
+	display: inline-block;
+	margin: 0px 20px 20px 0px;
+	
+	color: #999;
+}
+
+span.dianming{
+	font-size: 14px;
+	font-weight: bold;
+	
+}
+
+span.dianming:hover{
+	text-decoration: none;
+	color: #FF0036;
+}
+
+div.intro{
+	position: absolute;
+	z-index: 99;
+	width: 250px;
+	height: 290px;
+	color: #999;
+	font-size: 12px;
+	background-color: white;
+	padding: 10px;
+}
+
+div.dianpu-pingfen{
+	padding-bottom: 10px;
+	border: 1px solid whitesmoke;
+	color: #999;
+	letter-spacing: 1px;
+}
+
+div.dianpu-intro{
+	padding-bottom: 15px;
+	border-bottom: 1px solid whitesmoke;
+	margin: 10px 0px 10px 0px;
+	letter-spacing: 3px;
+	
+}
+
+span.dianpu-other1{
+	float: left;
+	    margin-left: 25px;
+	    vertical-align: top;
+	    width: 81px;
+	    height: 28px;
+	    border: 1px solid #e5e5e5;
+	    padding: 5px 0 0 15px;
+	    color: #404040;
+	    position: absolute;
+	    background-color: #f2f2f2;	
+}
+
+span.dianpu-other2{
+	float: left;
+	    margin-left: 140px;
+	    vertical-align: top;
+	    width: 81px;
+	    height: 28px;
+	    border: 1px solid #e5e5e5;
+	    padding: 5px 0 0 15px;
+	    color: white;
+	    position: absolute;
+	    background-color: #FF0036;	
+}
+
+span.pingfen1{
+	margin-right: 50px;
+	
+}
+
+span.tubiao{
+	color: #FF0036;
+	border: 1px solid #FF0036;
+}
+
+</style>
+
+<script>
+	$(function(){
+	    $("div.intro").hide();
+	    $("tr.dianpu1").mousemove(function(){
+	        $("div.intro").show();
+	        
+	    });
+	    $("tr.dianpu1").mouseout(function(){
+	        $("div.intro").hide();
+	            
+	    });
+	})
+
+</script>
+
+<div>
+	<nav class="top">
+		<a href="index1.html">
+			<span style="color: red;" class="glyphicon glyphicon-home "></span>
+			天猫首页
+		</a>
+
+		<span>喵，欢迎来天猫</span>
+		<a href="login.html">请登录</a>
+		<a href="register.html">免费注册</a>
+
+		<span class="pull-right" style="font-family: arial black;">
+			<a href="order.html">我的淘宝</a>
+			<a href="cart.html">
+				<span class=" glyphicon glyphicon-shopping-cart "></span>
+				购物车<strong>0</strong>件
+			</a>
+		</span>
+	</nav>
+
+	<div class="dian">
+		<table>
+			<tr class="dianpu1">
+				<div>
+					<td class="dianpu">
+						<a href="#"><span class="dianming">三只松鼠旗舰店</span></a><br>
+						<span style="font-size: 10px;color: #856651;background-color: #f4c985;
+    border: 1px solid #e7ba77;">品牌直销</span>
+						<a href="#"><img src="https://how2j.cn/tmall/img/site/wangwang.png" style="margin-left: 5px;" /></a>
+					</td>
+					<td class="pingfen">
+						<span style="letter-spacing: 2px;color: #999;font-family: arial;font-size: 12px;">描述 服务 物流 </span><br />
+						<span style="color: #FF0036;font-size: 10px;">
+							4.8<span class="glyphicon glyphicon-arrow-up"></span>
+							4.8<span class="glyphicon glyphicon-arrow-up"></span>
+							4.8<span class="glyphicon glyphicon-arrow-up"></span>
+						</span>
+					</td>
+				</div>
+				<td class="mobile">
+					<span class="mobile-view">手机浏览</span>
+				</td>
+
+			</tr>
+		</table>
+
+		<div class="intro">
+			<div class="dianpu-pingfen">
+				<table>
+					<tr>
+						<td><span class="pingfen1">店铺动态评分</span></td>
+						<td class="pingfen2">与同行业相比</td>
+					</tr>
+
+					<tr>
+						<td>描述相符：<span style="color: #35a">4.8</span></td>
+						<td><span style="color: #FF0036" class="glyphicon glyphicon-arrow-up"></span>高于 19.43%</td>
+					</tr>
+					<tr>
+						<td>服务态度：<span style="color: #35a">4.8</span></td>
+						<td><span style="color: #FF0036" class="glyphicon glyphicon-arrow-up"></span>高于 19.43%</td>
+					</tr>
+					<tr>
+						<td>物流服务：<span style="color: #35a">4.8</span></td>
+						<td><span style="color: #FF0036" class="glyphicon glyphicon-arrow-up"></span>高于 19.43%</td>
+					</tr>
+				</table>
+
+			</div>
+
+			<div class="dianpu-intro">
+				<table>
+					<tr>
+						<p>店铺服务</p>
+					</tr>
+					<tr>掌柜：<span><a href="#" style="color: #999;">三只松鼠旗舰店</a></span></tr>
+
+					<tr>
+						<td>客服：<a href="#"><img src="https://how2j.cn/tmall/img/site/wangwang.png"></a></td>
+					</tr>
+					<tr>
+						<td>开店时长：<span class="tubiao"><span style="background-color: #FF0036;color: #e7ba77;letter-spacing: 0px;"> 8
+								</span> 天猫8年店</span></td>
+					</tr>
+					<tr>
+						<td>所在地：<span>安徽，合肥</span> </td>
+					</tr>
+					<tr>
+						<td>企业资质：<a href="#"><img src="Tmall/police.png"></a> </td>
+					</tr>
+				</table>
+			</div>
+			<div class="dianpu-other">
+				<div>
+					<a href="#"><span class="dianpu-other1">进店逛逛</span></a>
+				</div>
+				<div>
+					<a href="#"><span class="dianpu-other2">收藏本店</span></a>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+	<div class="serach" style="height: 50px;">
+		<a href="#">
+			<img class="logo" src="Tmall/Ticon.png" />
+		</a>
+
+
+		<div class="searchDiv">
+			<input type="text" name="keyword" placeholder="搜索 天猫 商品/品牌/店铺" />
+			<button class="searchButton" type="submit">搜索</button>
+			<!--
+		<div class="searchBelow">
+			<span> <a href="#">平衡车</a> <span>|</span>		</span>
+			<span> <a href="#">扫地机器人</a> <span>|</span>		</span>
+			<span> <a href="#">榨汁机</a> <span>|</span>		</span>
+			<span> <a href="#">冰箱</a> <span>|</span>		</span>
+			
+			
+		</div>
+		-->
+		</div>
+
+	</div>
+</div>
+
+<style>
+	.dian-logo {
+		position: absolute;
+		top: 150px;
+
+		width: 100%;
+		height: 150px;
+		background-color: #806F66;
+		margin-bottom: 20px;
+
+	}
+
+	.item-detil {
+		padding: 160px 50px 0px 98px;
+
+		width: 100%;
+		height: 770px;
+	}
+
+	.item-tu {
+
+		width: 35%;
+		height: 580px;
+
+	}
+
+	.item-title {
+		top: 336px;
+		left: 550px;
+		position: absolute;
+		width: 40%;
+		height: 580px;
+
+		padding: 0px 15px 0px 15px;
+	}
+
+	.item-right {
+		left: 1130px;
+		top: 336px;
+		position: absolute;
+
+		width: 15%;
+		height: 580px;
+		padding: 0px 30px 10px 10px;
+	}
+
+	.item-datu img {
+		width: 100%;
+		height: 418px;
+
+	}
+
+	.item-xiaotu {
+		width: 100%;
+		height: 80px;
+		
+		margin: 20px 0px 10px 0px;
+	}
+
+	.item-xiaotu img{
+		border:  2px solid white;
+	}
+	
+	.smallImage{
+		width: 60px;
+		height: 60px;
+	}
+
+	.item-xiaotu img:hover {
+		border:  2px solid black;
+		cursor: pointer;
+	}
+
+	.item-bottom {
+		width: 100%;
+		height: 40px;
+
+
+	}
+
+	.item-bottom1 {
+		color: #999;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 10px;
+		padding-right: 5px;
+	}
+
+	.item-bottom1 a:hover {
+		text-decoration: none;
+	}
+
+
+	.item-bottom2 {
+		float: left;
+		padding-left: 5px;
+	}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+		$("img.smallImage").mouseenter(function() {
+			var bigImageURL = $(this).attr("bigImageURL");
+			$("img.bigImg").attr("src", bigImageURL);
+		});
+		$("img.bigImg").load(
+			function() {
+				$("img.smallImage").each(function() {
+					var bigImageURL = $(this).attr("bigImageURL");
+					img = new Image();
+					img.src = bigImageURL;
+					img.onload = function() {
+						console.log(bigImageURL);
+						$("div.img4load").append($(img));
+					};
+				});
+			}
+		);
+
+	});
+</script>
+
+
+
+<!--店铺logo内容 -->
+<div class="dian-logo">
+
+</div>
+
+
+
+<div class="item-detil">
+	<div class="item-tu">
+		<div class="item-datu">
+
+			<img class="bigImg" src="https://img.alicdn.com/imgextra/i1/880734502/O1CN01vAFXVJ1j7xfqyt2f1_!!0-item_pic.jpg_430x430q90.jpg" />
+		</div>
+
+		<div class="item-xiaotu">
+			<img class="smallImage" style="margin: 8px 8px;" src="https://img.alicdn.com/imgextra/i1/880734502/O1CN01vAFXVJ1j7xfqyt2f1_!!0-item_pic.jpg_430x430q90.jpg"
+			 bigImageURL="https://img.alicdn.com/imgextra/i1/880734502/O1CN01vAFXVJ1j7xfqyt2f1_!!0-item_pic.jpg_430x430q90.jpg">
+			<img class="smallImage" style="margin: 8px 8px;" src="https://img.alicdn.com/imgextra/i3/880734502/O1CN01U4bNuT1j7xZZs1dtY_!!0-item_pic.jpg_430x430q90.jpg"
+			 bigImageURL="https://img.alicdn.com/imgextra/i3/880734502/O1CN01U4bNuT1j7xZZs1dtY_!!0-item_pic.jpg_430x430q90.jpg">
+			<img class="smallImage" style="margin: 8px 8px;" src="https://img.alicdn.com/imgextra/i2/880734502/O1CN01wDMYwv1j7xeFqgZtd_!!880734502.jpg_430x430q90.jpg"
+			 bigImageURL="https://img.alicdn.com/imgextra/i2/880734502/O1CN01wDMYwv1j7xeFqgZtd_!!880734502.jpg_430x430q90.jpg">
+			<img class="smallImage" style="margin: 8px 8px;" src="https://img.alicdn.com/imgextra/i2/880734502/O1CN01KmJsOa1j7xcnlyiJx_!!880734502.jpg_430x430q90.jpg"
+			 bigImageURL="https://img.alicdn.com/imgextra/i2/880734502/O1CN01KmJsOa1j7xcnlyiJx_!!880734502.jpg_430x430q90.jpg">
+			<img class="smallImage" style="margin: 8px 8px;" src="https://img.alicdn.com/imgextra/i3/880734502/TB2yTtqbkvoK1RjSZFDXXXY3pXa_!!880734502.jpg_430x430q90.jpg"
+			 bigImageURL="https://img.alicdn.com/imgextra/i3/880734502/TB2yTtqbkvoK1RjSZFDXXXY3pXa_!!880734502.jpg_430x430q90.jpg">
+		</div>
+		<div class="img4load hidden"></div>
+		<div class="item-bottom">
+			<p class="item-bottom1"><span class="item-bottom2"><a href="#"><span class=" item-bottom1">收藏商品</span></a><span>(2020人气)</span></span><a
+				 href="#" style="float: right; font-size: 12px;color: #999;">举报</a></p>
+		</div>
+
+	</div>
+
+	<style type="text/css">
+		.item-datitle {
+			width: 100%;
+			height: 50px;
+
+			padding-left: 10px;
+		}
+
+		.item-xiaotitle {
+			background-color: whitesmoke;
+			width: 100%;
+			height: 130px;
+		}
+
+		.title1 {
+			background-color: whitesmoke;
+		}
+
+		.baoyou {
+			margin-left: 20px;
+			color: #b5621b;
+			;
+			font-size: 13px;
+		}
+
+		.baoyou a :hover {
+			text-decoration: none;
+		}
+
+		.youhui {
+			position: absolute;
+			top: 125px;
+			left: 440px;
+
+			border: none;
+
+		}
+
+		.youhui select {
+			border: none;
+			cursor: pointer;
+			background-color: whitesmoke;
+
+		}
+	</style>
+
+
+
+
+	<div class="item-title">
+		<div class="item-show">
+			<div class="item-datitle">
+				<span style="font-size: 16px;font-weight: 700;">活动【三只松鼠_每日坚果750g/30包】零食吃货大礼包干果混合孕妇</span>
+				<br />
+				<span style="font-size: 14px;color: #FF0036;">舌尖上的春游，0.01元抢爆款零食！</span>
+			</div>
+
+			<div class="item-xiaotitle">
+
+				<table>
+
+					<tr>
+						<td><span style="font-size: 12px;color: #999;">价格</span></td>
+						<td><span style="margin-left: 20px;text-decoration: line-through;"> 300.00</span></td>
+					</tr>
+					<tr>
+						<td><span style="font-size: 12px;color: #999;">促销价</span></td>
+						<td><span style="font-size: 20px;color: #FF0036;margin-left: 20px;font-weight: bold;">¥</span><span style="font-size: 30px;color: #FF0036;font-weight: bold;">158.00</span>
+							<span style="margin-left: 5px;background-color: #FF0036;color: white;font-size: 12px;opacity: 0.7;">优惠促销</span><br><span
+							 style="font-size: 12px;color: #FF0036;margin-left: 20px;">淘金币可抵扣商品价格3%</span></td>
+					</tr>
+
+					<tr>
+						<td><span style="font-size: 12px;color: #999;">本店活动</span></td>
+						<td><a href="#" class="baoyou">满68元，包邮</a>
+						</td>
+					</tr>
+					<div class="youhui"><select size="1">
+							<option selected="selected">更多优惠</option>
+						</select></div>
+
+					<tr>
+						<td><span style="font-size: 12px;color: #999;">运费</span></td>
+						<td><span style="font-size: 10px;margin-left: 20px;">安徽合肥 至 <select style="border: none;
+			cursor: pointer;"
+								 size="1">
+									<option selected="selected">合肥</option>
+								</select><br><span style="margin-left: 20px;color: #999;">快递0.00</span></span></td>
+					</tr>
+				</table>
+
+			</div>
+			<style type="text/css">
+				.item-sell {
+					width: 100%;
+
+					height: 260px;
+					margin-top: 20px;
+				}
+
+				.number {
+					width: 50px;
+				}
+
+				.font-color {
+					font-size: 12px;
+					color: #999;
+				}
+
+				.xiaoliang {
+					width: 40%;
+					text-align: center;
+					padding: 8px 45px 8px 45px;
+					border-right: 1px solid #CFCFCF;
+				}
+
+				.xiangliang-info {
+					width: 100%;
+					height: 50px;
+					border: 1px dotted #CFCFCF;
+					text-align: center;
+					padding: 15px;
+				}
+
+				.info-view {
+					margin-top: 20px;
+				}
+
+				.buy-number{
+					
+				}
+				
+				
+				span.updown img {
+					
+					vertical-align: top;
+				}
+				span.updown img:hover{
+					cursor: pointer;
+				}
+				
+				span.updown {
+					
+					border: 1px solid #999;
+					display: block;
+					width: 15px;
+					height: 15px;
+					text-align: center;
+					padding-top: 5px;
+				}
+
+				span.updownMiddle {
+					height: 2px;
+					display: block;
+				}
+				
+				input.number{
+					height: 30px;
+					width: 25px;
+					text-align: center;
+				}
+
+				.number-button{
+					position: absolute;
+					width: 60px;
+					height: 60px;
+				}
+				
+				.huabei {
+					width: 100px;
+					margin-left: 20px;
+					margin-top 20px;
+					height: 50px;
+
+					padding: 6px;
+					border: 1px solid #CFCFCF;
+					text-align: center;
+					float: left;
+				}
+
+				.huabei1:hover {
+					border: none;
+				}
+
+				.huabei1 :hover {
+					border: 2px solid red;
+					cursor: pointer;
+				}
+
+				.baoxian a {
+					color: #999;
+					margin-left: 20px;
+
+				}
+
+				.baoxian a:hover {
+					text-decoration: none;
+					border: 1 solid #FF0036;
+				}
+
+				.nowbuy {
+					background-color: pink;
+					border: 1px solid red;
+					width: 120px;
+					height: 40px;
+					margin-left: 80px;
+					display: inline-block;
+				}
+
+				.shopcart {
+					background-color: #FF0036;
+					border: 1px solid red;
+					width: 140px;
+					height: 40px;
+					margin-left: 80px;
+
+
+				}
+
+				.xiangliang-info a:hover {
+					text-decoration: none;
+					color: #999;
+				}
+			</style>
+
+
+<script type="text/javascript">
+	$(function(){
+	    var stock = 666;
+	    $(".number").keyup(function(){
+	        var num= $(".number").val();
+	        num = parseInt(num);
+	        if(isNaN(num))
+	            num= 1;
+	        if(num<=0)
+	            num = 1;
+	        if(num>stock)
+	            num = stock;
+	        $(".number").val(num);
+	    });
+	      
+		  $(".decreaseNumber").click(function(){
+		      var num= $(".number").val();
+		      --num;
+		      if(num<=0)
+		          num=1;
+		      $(".nmuber").val(num);
+		  });
+		  
+	    $(".increaseNumber").click(function(){
+	        var num= $(".number").val();
+	        num++;
+	        if(num>stock)
+	            num = stock;
+	        $(".number").val(num);
+	    });
+	    
+	      
+	});
+</script>
+			<div class="item-sell">
+				<div class="xiangliang-info">
+
+
+					<table>
+						<tr>
+							<td><span class="xiaoliang font-color">月销量<span style="color: #FF0036;font-weight: bold;"> 666</span></span></td>
+							<td><a href="#" class="xiaoliang font-color ">累计评价<span style="color: #FF0036; font-weight: bold;"> 666</span></a></td>
+							<td><a href="#" class="xiaoliang font-color ">送积分<span style="color: #3388BB;font-weight: bold;"> 666</span></a></td>
+						</tr>
+					</table>
+				</div>
+				<div class="info-view">
+					<table>
+						<tr>
+							<td><span class="font-color">食品口味</span>
+								<p></p>
+							</td>
+							<td><span style="width: 70px;height: 40px;padding: 5px;border: 2px solid red;margin-left: 20px;"><span>750g/30天装(家庭款)</span></span>
+								<p></p>
+							</td>
+						</tr>
+						<div class="buy-number">
+							<tr class="font-color">
+
+								<td><span>数量</span></td>
+								<td>
+									<p></p>
+									<span style="margin-left: 20px;height: 50px;"><input  type="text"
+										 value="5" class="number">
+									<span class="number-button">
+										
+										<span class="updown increaseNumber">
+											<img src="https://how2j.cn/tmall/img/site/increase.png">
+										</span>
+										
+										<span class="updownMiddle"></span>
+										<span class="updown decreaseNumber">
+											<img  src="https://how2j.cn/tmall/img/site/decrease.png">
+										</span>
+									</span>
+										<span style="margin-left: 20px;">库存666件</span></span>
+									<p></p>
+								</td>
+
+							</tr>
+						</div>
+
+						<tr>
+
+							<td><span class="font-color">花呗分期</span>
+								<p></p>
+							</td>
+
+							<td><span class="huabei1">
+									<span class="huabei">¥99x3期<br>(含手续费)</span>
+									<span class="huabei">¥99x3期<br>(含手续费)</span>
+									<span class="huabei">¥99x3期<br>(含手续费)</span>
+									<p></p>
+								</span>
+							</td>
+
+
+
+						</tr>
+
+						<tr>
+							<p></p>
+							<td><span class="font-color">服务承诺</span></td>
+							<td>
+								<p></p>
+								<span class="font-color ">
+									<span class="baoxian"><a href="#">赠保价险</a></span>
+									<span class="baoxian"><a href="#">赠保价险</a></span>
+									<span class="baoxian"><a href="#">正品保证</a></span>
+									<span class="baoxian"><a href="#">极速退款</a></span>
+								</span>
+
+							</td>
+
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+			<div class="item-other">
+				<table>
+					<tr>
+						<td>
+							<div class="now-buy">
+								<button type="button" class="nowbuy">立即购买</button>
+							</div>
+						</td>
+						<td>
+							<div class="shop-cart">
+								<button style="color: white;" type="button" class="shopcart"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+		</div>
+	</div>
+	<style type="text/css">
+		.right-title {
+			border-bottom: 1px dotted #999;
+			width: 88%;
+			height: 10px;
+
+		}
+
+		.right-title-1 {
+			font-size: 12px;
+			color: #999;
+			background-color: white;
+			margin-left: 45px;
+		}
+
+		.right-img {
+			margin-top: 20px;
+
+		}
+
+		.right-img1 img {
+			width: 143px;
+
+		}
+
+		.right-img-2 {
+			margin-bottom: 10px;
+
+		}
+
+		.right-img-2 span {
+
+			color: #999;
+		}
+
+		.right-zi {
+			font-size: 10px;
+
+		}
+
+		.right-img-2 :hover {
+			text-decoration: none;
+			color: #FF0036;
+		}
+
+		.right-logo {
+			text-align: center;
+			padding: 5px;
+		}
+	</style>
+
+
+	<div class="item-right">
+		<div class="right-title">
+			<span class="right-title-1">看了又看</span>
+		</div>
+
+		<div class="right-img">
+			<div class="right-img-2">
+				<a class="right-img1" href="#"><img src="https://img-tmdetail.alicdn.com/bao/uploaded///img.alicdn.com/bao/uploaded/O1CN01gTJILP1j7xfxDZ2MW_!!0-item_pic.jpg_160x160q90.jpg">
+					<br><span class="right-zi">正品三只松鼠黄飞鸿阿</span></a>
+			</div>
+			<div class="right-img-2">
+				<a class="right-img1" href="#"><img src="https://img-tmdetail.alicdn.com/bao/uploaded///img.alicdn.com/bao/uploaded/O1CN01MtmdGk1j7xfwQ1IJA_!!0-item_pic.jpg_160x160q90.jpg">
+					<br><span class="right-zi">正品三只松鼠黄飞鸿阿</span></a>
+			</div>
+			<div class="right-img-2">
+				<a class="right-img1" href="#"><img src="https://img-tmdetail.alicdn.com/bao/uploaded///img.alicdn.com/bao/uploaded/O1CN01nAHxx71j7xfzlPVDc_!!0-item_pic.jpg_160x160q90.jpg">
+					<br><span class="right-zi">正品三只松鼠黄飞鸿阿</span></a>
+			</div>
+		</div>
+
+		<div class="right-logo">
+			<span style="margin-right: 5px;" class="glyphicon glyphicon-chevron-up"></span>
+			<span style="margin-left: 5px;" class="glyphicon glyphicon-chevron-down"></span>
+		</div>
+
+	</div>
+
+
+
+
+
+</div>
+
+<style type="text/css">
+	.middle-detile {
+		width: 80%;
+		height: 700px;
+
+	}
+
+	.left-detile {
+		width: 18%;
+		height: 700px;
+
+		margin-left: 80px;
+	}
+
+	.right-detile {
+		top: 945px;
+		left: 275px;
+		position: absolute;
+		width: 59%;
+		height: 700px;
+		border: 1px solid #E5E5E5;
+	}
+
+	.left-dian {
+		width: 190px;
+		height: 180px;
+		border: 1px solid #e5e5e5;
+		margin-bottom: 10px;
+	}
+
+	.left-search {
+		width: 190px;
+		height: 180px;
+		border: 1px solid #e5e5e5;
+		margin-bottom: 10px;
+	}
+
+	.left-dian1 {
+		width: 188px;
+		height: 60px;
+		background-color: #fafafa;
+		padding: 20px 20px 10px 20px;
+	}
+
+	.left-dian1 span {
+
+		font-weight: bold;
+	}
+
+	.left-dian1 a:hover {
+		text-decoration: none;
+		color: #000000;
+	}
+
+	.left-dian2 {
+		width: 188px;
+		height: 40px;
+		padding: 10px 0px 0px 40px;
+	}
+
+	.left-dian3 {
+		width: 188px;
+		height: 50px;
+		padding: 0px 0px 0px 40px;
+	}
+
+	.left-dian3-1 {
+		letter-spacing: 5px;
+		margin-right: 3px;
+		color: #999;
+		font-size: 12px;
+	}
+
+	.left-dian4 {
+		width: 188px;
+		height: 30px;
+		padding: 0px 0px 0px 20px;
+	}
+
+	.left-search1 {
+		width: 188px;
+		height: 40px;
+		background-color: #fafafa;
+		padding: 8px 20px 8px 20px;
+	}
+
+	.left-search2 {
+		width: 188px;
+		height: 40px;
+		padding: 8px 20px 8px 20px;
+	}
+
+	.left-search2 input {
+		width: 80px;
+		height: 30px;
+		margin-left: 10px;
+
+	}
+
+	.left-search3 {
+		width: 188px;
+		height: 40px;
+		padding: 8px 20px 8px 20px;
+	}
+
+	.left-search3 input {
+		width: 35px;
+		height: 30px;
+	}
+
+	.left-search4 {
+		width: 188px;
+		height: 40px;
+		padding: 20px 70px 10px 70px;
+	}
+
+	.left-other img {
+		width: 188px;
+		height: 315px;
+	}
+</style>
+
+<div class="middle-detile">
+	<div class="left-detile">
+		<div class="left-dian">
+			<div class="left-dian1">
+				<span><a href="#">三只松鼠旗舰店<img src="Tmall/img/site/wangwang.png"></a></span>
+			</div>
+			<div class="left-dian2">
+				<span style="background-color: #f04343;color: #ffd800;padding-left: 3px;"> 8 </span>
+				<span style="color: #999;padding-left: 6px;font-weight: 700;"> 天猫8年店</span>
+			</div>
+			<div class="left-dian3">
+				<span class="left-dian3-1">描述</span><span class="left-dian3-1">服务</span><span class="left-dian3-1">物流</span><br>
+				<span style="color: #FF0036;">
+					<span>4.8</span><span class="glyphicon glyphicon-arrow-up"></span>
+					<span>4.8</span><span class="glyphicon glyphicon-arrow-up"></span>
+					<span>4.8</span><span class="glyphicon glyphicon-arrow-up"></span>
+				</span>
+			</div>
+
+			<div class="left-dian4">
+				<button type="button" style="margin-right: 5px;background-color: #333;color: white;border: none;padding: 4px 8px 4px 8px;">进店逛逛</button>
+				<button type="button" style="border: none;padding: 5px 8px 5px 8px;background-color: #f5f5f5;">收藏店铺</button>
+			</div>
+
+		</div>
+
+		<div class="left-search">
+			<div class="left-search1">
+				<span style="font-size: 12px;font-weight: bold;">本店搜索</span>
+			</div>
+
+			<div class="left-search2">
+				<span>关键词</span><input type="text" />
+			</div>
+
+			<div class="left-search3">
+				<span style="margin-right: 22px;">价格</span><input type="text" /><span>--</span><input type="text" />
+			</div>
+
+			<div class="left-search4">
+				<button type="button" style="background-color: #333333;padding: 4px 10px 4px 10px;color: white;border: none;">搜索</button>
+			</div>
+
+
+		</div>
+		<div class="left-other">
+			<a href="#"><img src="https://gdp.alicdn.com/imgextra/i1/880734502/O1CN01sljhm01j7xexheOBj_!!880734502.jpg"></a>
+		</div>
+
+
+	</div>
+
+	<style type="text/css">
+		.right-detile-title {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid #E5E5E5;
+			padding: 18px 18px 18px 0px;
+			margin-bottom: 5px;
+		}
+
+		.right-detile-title1 {
+			width: 50px;
+			height: 50px;
+			border-top: 2px solid #FF0036;
+			padding: 18px;
+			font-size: 10px;
+			color: #FF0036;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.right-detile-title a:hover {
+			text-decoration: none;
+
+		}
+
+		.right-detile-title2 {
+			width: 50px height: 50px;
+			font-size: 10px;
+			padding: 18px 4px 18px 0px;
+			cursor: pointer;
+		}
+
+		.right-detile-info {
+			margin: 10px 0px 0px 0px;
+			border: 1px solid #E5E5E5;
+			width: 100%;
+			height: 300px;
+			padding: 15px 0px 15px 20px;
+		}
+
+		.reght-detile-info1 {
+			padding: 10px 0px 0px 0px;
+			color: #666;
+		}
+
+		.right-detile-date {
+
+			width: 100%;
+			height: 50px;
+			background-color: #f6f6f6;
+			padding: 15px;
+			margin: 50px 0px 0px 0px;
+		}
+
+		.right-detile-img img {
+			width: 100%;
+			height: 900px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(function() {
+			$("div.right-detile1").hide();
+			$(".right-detile-title3").click(function() {
+				$("div.right-detile").show();
+				$("div.right-detile1").hide();
+			});
+			$(".right-detile-title2").click(function() {
+				$("div.right-detile").hide();
+				$("div.right-detile1").show();
+			});
+		})
+	</script>
+
+
+	<div class="right-detile">
+
+		<div class="right-detile-title">
+			<span class="right-detile-title1">商品详情</span>
+			<span class="right-detile-title2">累计评价</span><span style="color: #3388BB;">99</span>
+		</div>
+		<div class="right-detile-other">
+			<span style="font-size: 12px;">商品具有<a href="#" style="color: #3388BB;">生产许可证编号</a>,符合食品质量安全准入标准。</span>
+
+			<div class="right-detile-info">
+				<div>
+					<span style="font-size: 13px;color: #333333;opacity: 0.8;">品牌名称：Three Squirrels/三只松鼠</span>
+				</div>
+				<div style="margin: 45px 0px 5px 0px;">
+					<span style="font-size: 13px;color: #999;">产品参数：</span>
+				</div>
+
+				<div class="reght-detile-info1">
+					<span>生产许可证编号：SC12432012400284</span>
+					<span style="margin-left: 30px;">产品标准号：Q/FJDF 0003S</span>
+					<span style="margin-left: 30px;">厂名：含羞草(江苏)食品有限公司</span>
+				</div>
+				<div class="reght-detile-info1">
+					<span>厂址：南京市溧水经济开发区溧星路97号</span>
+					<span style="margin-left: 18px;">厂家联系方式：400-800-4900</span>
+					<span style="margin-left: 22px;">配料表：扁桃仁、蔓越莓干</span>
+				</div>
+				<div class="reght-detile-info1">
+					<span>储藏方法：密封保存于常温、避光</span>
+					<span style="margin-left: 57px;">保质期：180 天</span>
+					<span style="margin-left: 104px;">食品添加剂：详见产品包装</span>
+				</div>
+				<div class="right-detile-date">
+					<span class="glyphicon glyphicon-time">生产日期: 2019-10-24 至 2020-02-06</span>
+				</div>
+
+
+
+			</div>
+
+
+
+			<div class="right-detile-img">
+				<img src="https://gdp.alicdn.com/imgextra/i1/880734502/O1CN01kaOTaT1j7xeY6yLZ6_!!880734502.jpg">
+			</div>
+
+
+
+
+
+		</div>
+
+	</div>
+
+	<style type="text/css">
+		.right-detile1 {
+			top: 945px;
+			left: 275px;
+			position: absolute;
+			width: 59%;
+			height: 700px;
+			border: 1px solid #E5E5E5;
+		}
+
+		.right-detile-title4 {
+			width: 70px;
+			height: 40px;
+			border-top: 2px solid #FF0036;
+			padding: 18px;
+			font-size: 10px;
+			color: #FF0036;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.right-detile-title a:hover {
+			text-decoration: none;
+
+		}
+
+		.right-detile-title3 {
+			width: 80px;
+			height: 40px;
+			font-size: 10px;
+			padding: 15px 8px 20px 18px;
+			cursor: pointer;
+		}
+
+		.review-top {
+			width: 100%;
+			height: 140px;
+			border-bottom: 1px solid #A4A4A4;
+		}
+
+		.review-top-star {
+			width: 100%;
+			height: 100px;
+
+			padding: 10px 20px 0px 25px;
+
+		}
+
+		.review-top-all {
+			width: 100%;
+			height: 40px;
+			background-color: #EFEFEF;
+			padding: 8px 0px 10px 15px;
+			border: 1px solid #c8c8c8;
+		}
+	</style>
+
+
+
+	<div class="right-detile1">
+		<div class="right-detile-title">
+			<span class="right-detile-title3">商品详情</span>
+			<span class="right-detile-title4">累计评价<span style="color: #3388BB;">99</span></span>
+		</div>
+
+		<div class="review-top">
+			<div class="review-top-star">
+				<div>
+					<span>与描述相符</span><br />
+					<span style="color: #f60;font-size:32px ;font-family: arial;margin-left: 7px;">4.8</span><br />
+					<span><img src="Tmall/img/site/star/5.png"></span>
+				</div>
+			</div>
+			<div class="review-top-all">
+				<span>
+					<input type="radio" name="select" checked="checked">全选
+					<input type="radio" name="select">追评
+					<input type="radio" name="select">有图片
+				</span>
+				<span style="float: right;">
+					<input type="checkbox" checked="checked" />有内容
+					<select size="2" style="height: 20px; background-color:#EFEFEF ;">
+						<option selected="selected">按默认</option>
+						<option>按时间</option>
+					</select>
+				</span>
+			</div>
+		</div>
+
+		<style type="text/css">
+			.right-review {
+				width: 100%;
+				height: 150px;
+				border-bottom: 1px solid #e5e5e5;
+				margin-top: 20px;
+				padding-left: 5px;
+
+			}
+
+			.right-review-img {
+				width: 100%;
+				height: 60px;
+				margin-top: 20px;
+				clear: both;
+			}
+
+			.right-review-img img {
+				width: 40px;
+				height: 40px;
+			}
+
+
+			.right-review-reply {
+				color: #AF874D;
+				width: 65%;
+				height: 30px;
+			}
+
+			.right-review-user {
+				width: 230px;
+				height: 30px;
+				float: right;
+			}
+		</style>
+
+
+		<div class="right-review">
+			<span style="font-size: 12px;">买了其他品牌都每日坚果还是三只松鼠最好吃，家里老人小孩都喜欢</span><br>
+			<div class="right-review-img">
+
+				<img src="https://img.alicdn.com/bao/uploaded/i1/O1CN01WNcuqP1JQZlEzr7le_!!0-rate.jpg_40x40.jpg">
+				<img src="https://img.alicdn.com/bao/uploaded/i3/O1CN01XxTm0r1JQZlHH6sYL_!!0-rate.jpg_40x40.jpg">
+				<span class="right-review-user">
+					<span style="font-size: 12px;">食品口味：</span>
+					<span style="color: #999;font-size: 12px;">750g/ 30天装<br>（家庭款）</span>
+					<span style="color: #999;margin-left: 70px;font-size: 12px;">w***1（匿名）</span></span>
+				<br>
+				<span style="color: #ccc">2020.03.01</span>
+
+				<br></div>
+
+			<div class="right-review-reply">
+				<span>解释：让我们红尘作伴，吃的白白胖胖！策马奔腾，共享美食满堂~谢谢您的好心情分享，
+					感谢您一路上支持，因为有您，小松鼠的生活才更加丰富多彩~~</span>
+			</div>
+		</div>
+
+
+		<div class="right-review">
+			<span style="font-size: 12px;">不愧是三只松鼠，分量很足</span><br>
+			<div class="right-review-img">
+
+				<img src="https://img.alicdn.com/bao/uploaded/i1/O1CN01D5mxH61J1qNFDzhqJ_!!0-rate.jpg_40x40.jpg">
+				<img src="https://img.alicdn.com/bao/uploaded/i4/O1CN0198mDDI1J1qNAkjVy3_!!0-rate.jpg_40x40.jpg">
+				<span class="right-review-user">
+					<span style="font-size: 12px;">食品口味：</span>
+					<span style="color: #999;font-size: 12px;">750g/ 30天装<br>（家庭款）</span>
+					<span style="color: #999;margin-left: 70px;font-size: 12px;">南***8（匿名）<br><span style="color: #B57C5B;">超级会员</span></span></span>
+				<br>
+				<span style="color: #ccc">2020.02.28</span>
+
+				<br></div>
+
+			<div class="right-review-reply">
+				<span>解释：让我们红尘作伴，吃的白白胖胖！策马奔腾，共享美食满堂~谢谢您的好心情分享，
+					感谢您一路上支持，因为有您，小松鼠的生活才更加丰富多彩~~</span>
+			</div>
+		</div>
+
+		<div class="right-review">
+			<span style="font-size: 12px;">量足，新鲜，会回购</span><br>
+			<div class="right-review-img">
+
+
+				<span class="right-review-user">
+					<span style="font-size: 12px;">食品口味：</span>
+					<span style="color: #999;font-size: 12px;">750g/ 30天装<br>（家庭款）</span>
+					<span style="color: #999;margin-left: 70px;font-size: 12px;">f***j（匿名）<br><span style="color: #B57C5B;">超级会员</span></span></span>
+				<br>
+				<span style="color: #ccc">2020.02.28</span>
+
+				<br></div>
+
+			<div class="right-review-reply">
+				<span>解释：对于松鼠来说世界上最好听情话就是听到主人们说会回购，对松鼠说最好吃的就是
+					松鼠家的零食，哈哈，听着情话，吃着零食，别提小松鼠有多开心啦。</span>
+			</div>
+		</div>
+
+		<div class="right-review">
+			<span style="font-size: 12px;">疫情期间还能这么快到货，非常好。怀孕了每天吃一包</span><br>
+			<div class="right-review-img">
+
+
+				<span class="right-review-user">
+					<span style="font-size: 12px;">食品口味：</span>
+					<span style="color: #999;font-size: 12px;">750g/ 30天装<br>（家庭款）</span>
+					<span style="color: #999;margin-left: 70px;font-size: 12px;">f***j（匿名）<br>
+						<span style="color: #B57C5B;">超级会员</span></span></span>
+				<br>
+				<span style="color: #ccc">2020.02.28</span>
+
+				<br></div>
+
+			<div class="right-review-reply">
+				<span>解释：让我们红尘作伴，吃的白白胖胖！策马奔腾，共享美食满堂~谢谢您的好心情分享，
+					感谢您一路上支持，因为有您，小松鼠的生活才更加丰富多彩~~</span>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+</div>
