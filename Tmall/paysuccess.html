@@ -74,11 +74,143 @@
 </style>
 
 
-<div class="pay-top">
+<style>
+	body{
+	font-size: 13px;
+	font-family: arial;
+}
+
+ a{
+	color: black;
+	
+}
+
+nav.top{
+	background-color: whitesmoke;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 0px solid whitesmoke;
+	
+}
+
+nav.top a,nav.top span{
+	font-size: 11px;
+	font-family: "arial black";
+	color: black;
+	margin: 0px 10px 0px 10px;
+	opacity: 0.7;
+	
+}
+nav.top a:hover{
+	color: red;
+	text-decoration: none;
+}
+
+div.searchDiv{
+	background-color: #ff0036;
+	width: 600px;
+	margin: 30px auto;
+	padding: 1px;
+	height: 40px;
+	display: block;
+	margin-left:  380px;
+}
+
+div.searchDiv input{
+	background-color: white;
+	width: 480px;
+	border: 1px solid transparent;
+	height: 36px;
+	margin: 1px;
+	outline: none;
+	
+}
+
+div.searchDiv input:hover{
+	
+}
+
+div.searchDiv button{
+	width: 110px;
+	border: 1px solid transparent;
+	background-color: #FF0036;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+div.searchBelow{
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
+div.searchBelow span{
+	color: white;
+}
+
+div.searchBelow a{
+	color: #999999;	
+	padding: 0px 20px 0px 20px;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+div.searchBelow a:hover{
+	color: #FF0036;
+}
+
+img.logo{
+	width: 200px;
+	position: absolute;
+	margin:30px 0px 10px 90px;
+	top: 40px;
+	z-index: -1;
+}
+
+
+
+</style>
+
+<nav class="top">
+	<a href="index1.html">
+		<span class=" glyphicon glyphicon-home " ></span>
+		天猫首页
+	</a>
+
+	<span>喵，欢迎来天猫</span>
+	<a href="login.html">请登录</a>
+	<a href="register.html">免费注册</a>
+
+	<span class="pull-right">
+		<a href="order.html">我的淘宝</a>
+		<a href="cart.html">
+			<span class="glyphicon glyphicon-shopping-cart" style="color: red;"></span>
+			购物车<strong>0</strong>件
+		</a>
+	</span>
+</nav>
+
+<div style="height: 50px;">
+	<a href="#">
+		<img class="logo" src="Tmall/Ticon.png" />
+	</a>
+
+
+	<div class="searchDiv">
+		<input type="text" name="keyword" placeholder="搜索 天猫 商品/品牌/店铺" />
+		<button class="searchButton" type="submit">搜索</button>
+
+		<div class="searchBelow">
+			<span> <a href="#">平衡车</a> <span>|</span>		</span>
+			<span> <a href="#">扫地机器人</a> <span>|</span>		</span>
+			<span> <a href="#">榨汁机</a> <span>|</span>		</span>
+			<span> <a href="#">冰箱</a> <span>|</span>		</span>
+			
+			
+		</div>
+	</div>
+
 </div>
-<script type="text/javascript">
-	$("div.pay-top").load("search.html")
-</script>
 
 
 <div class="payedDiv">
